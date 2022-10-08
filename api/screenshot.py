@@ -1,6 +1,5 @@
 from selenium import webdriver
 from time import sleep
-from utils import generate_random_str
 from werkzeug.utils import secure_filename
 from utils import parse_url
 from os import path
@@ -20,9 +19,7 @@ def screenshot(url: str)-> str:
     if path.exists("./tmp/{}".format(filename)):
         return filename
     driver.get(url)
-    #sleep(10)
     driver.execute_script('var x = document.createElement("style");x.innerHTML = "*{overflow:hidden !important}";document.querySelector("body").append(x)')
-    #driver.get_screenshot_as_file("./tmp/screenshot_{}.png".format(generate_random_str(5)))
     driver.get_screenshot_as_file("./tmp/{}".format(filename))
     sleep(1)
     return filename
