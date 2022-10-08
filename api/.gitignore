@@ -1,4 +1,4 @@
-vanv/
+venv/
 tmp/
 __pycache__/
 *.exe
