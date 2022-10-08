@@ -9,7 +9,7 @@
                 "src/main.js"
             ]
             ,"matches": [
-                "<all_urls>"
+                "https://www.google.com/search"
             ]
         }
     ]
